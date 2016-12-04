@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="wrapper"></div>
+	<div id="my"></div>
+	<script type="text/javascript">
+		var docFragment = document.createDocumentFragment();
+		var ul = document.createElement('ul');
+		var a = document.createElement('a');
+		ul.innerHTML = '';
+		for (var i=1; i<=4; i+=1){
+			ul.innerHTML+= '<li><a href="#"> List number'+i+'</a></li>';
+		}
+		docFragment.appendChild(ul);
+
+		
+	my.appendChild(docFragment);
+	//document.body.appendChild(docFragment);
+	console.log(my);
+	</script>
+</body>
+</html>

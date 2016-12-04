@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="wrapper"></div>
+	<script type="text/javascript">
+	var div = document.getElementById("wrapper");
+	var docFrag = document.createDocumentFragment();
+	var form = document.createElement('div');
+	var nameOne = document.createElement('input');
+	nameOne.type = 'text';
+	nameOne.name = 'name';
+	nameOne.placeholder = 'Name';
+	var pass = document.createElement('input');
+	pass.type = 'password';
+	pass.name = 'pass';
+	pass.placeholder = 'Password';
+	var tel = document.createElement('input');
+	tel.type = 'text';
+	tel.name = 'tel';
+	tel.placeholder = 'Telefon';
+	var sub = document.createElement('input');
+	sub.type = 'submit';
+	sub.name = 'submit';
+	sub.value = 'submit';
+	var parag1 = document.createElement('p');
+	parag1.innerHTML = 'Name:';
+	var parag2 = document.createElement('p');
+	parag2.innerHTML = 'Password:';
+	var parag3 = document.createElement('p');
+	parag3.innerHTML = 'Telefon:';
+	form.appendChild(parag1);
+	form.appendChild(nameOne);
+	form.appendChild(parag2);
+	form.appendChild(pass);
+	form.appendChild(parag3);
+	form.appendChild(tel);
+	form.appendChild(sub);
+	div.appendChild(form);
+	docFrag.appendChild(div);
+	document.body.appendChild(docFrag);
+	</script>
+</body>
+</html>

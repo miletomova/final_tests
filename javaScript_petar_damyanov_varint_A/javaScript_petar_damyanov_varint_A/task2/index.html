@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="wrapper"></div>
+	<script type="text/javascript">
+//get wrapper
+		var wrap=document.getElementById('wrapper');
+//create ul
+var ul = document.createElement('ul');
+//apend ul to div
+wrap.appendChild(ul);
+//append li to ul
+var i=1;
+while (i<=4) {
+	//create li
+	var li=document.createElement('li');
+	ul.appendChild(li);
+	var a=document.createElement('a');
+	li.appendChild(a);
+	a.href='#';
+	a.innerHTML="link_"+i;
+	i++
+}
+	</script>
+</body>
+</html>

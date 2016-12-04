@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.1.1"></script>
+</head>
+<body>
+	<div id="wrapper"></div>
+	<script type="text/javascript">
+      
+         var inputName = document.createElement('input');
+         inputName.type = 'text';
+         inputName.name = 'name';
+         console.log('inputText');
+
+
+         var inputPhone = document.createElement('input');
+         inputPhone.type = 'text';
+         inputPhone.name = 'phone';
+         console.log('inputPhone');
+
+
+         var inputPassword = document.createElement('input');
+         inputPassword.type = 'password';
+         inputPassword.name = 'password';
+         console.log('inputPassword');
+
+
+         var submit = document.createElement('input');
+         submit.type = 'submit';
+         submit.name = 'submit';
+         submit.value = 'Enter';
+         console.log('inputSubmit');
+
+
+         var form = document.createElement('form');
+         form.id = 'form';
+
+
+
+         form.appendChild(inputName);
+         form.appendChild(inputPhone);
+         form.appendChild(inputPassword);
+         form.appendChild(submit);
+
+        console.log('form');
+
+
+	</script>
+</body>
+</html>

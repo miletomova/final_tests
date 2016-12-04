@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="wrapper"></div>
+
+	<script>
+ 		 var div = document.getElementById('wrapper');
+ 		
+
+ 		var ul = document.createElement('ul');
+
+ 		var li = document.createElement('li');
+ 		var a = document.createElement('a');
+
+ 		for (var i = 1; i <= 4;  i++) {
+ 			
+ 			li[i] = li.cloneNode(true);
+ 			a[i] = a.cloneNode(true);
+ 			a[i].href = 'http://telerikacademy.com/Administration_Lecturer/CourseManagement/Index/297 '+ i;
+ 			a[i].textContent = 'My link '+i;
+ 			
+ 			li[i].appendChild(a[i]);
+
+ 			ul.appendChild(li[i]);
+
+			div.appendChild(ul);	
+ 		}
+
+
+ var dFrag = document.createDocumentFragment();
+ console.log(dFrag.appendChild(div));
+
+document.body.appendChild(dFrag);
+
+
+  </script>
+</body>
+</html>

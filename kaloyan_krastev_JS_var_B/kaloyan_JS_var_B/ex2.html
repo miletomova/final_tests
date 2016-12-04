@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ex2</title>
+</head>
+<body>
+	<div id="wrapper"></div>
+
+	<script type="text/javascript">
+		//FRAGMENT
+		var docFrag=document.createDocumentFragment();
+
+		//FORM
+		var form=document.createElement('form');
+		form.id='form_id';
+		form.name='form_name';		
+		//document.getElementById('wrapper').appendChild(form);
+
+		//NAME
+		var p_name=document.createElement("p");
+		p_name.innerHTML="Enter your name: ";
+		p_name.id="name_field_id";
+		form.appendChild(p_name);
+
+		var input_name_field=document.createElement('input');
+		input_name_field.type='text';
+		input_name_field.id='name_field';
+		input_name_field.name='name_text_field';
+		form.appendChild(input_name_field);
+		
+		//PASSWORD
+		var p_password=document.createElement('p');
+		p_password.innerHTML="Enter your password: ";
+		p_password.id='password_field_id';
+		form.appendChild(p_password);
+
+		var input_password_field=document.createElement('input');
+		input_password_field.type='password';
+		input_password_field.id='password_field';
+		input_password_field.name='password_text_field';
+		form.appendChild(input_password_field);
+
+		//TELEPHONE
+		var p_telephone=document.createElement('p');
+		p_telephone.innerHTML="Enter your telephone: ";
+		p_telephone.id='telephone_field_id';
+		form.appendChild(p_telephone);
+
+		var input_telephone_field=document.createElement('input');
+		input_telephone_field.type='text';
+		input_telephone_field.id='telephone_field';
+		input_telephone_field.name='telephone_text_field';
+		form.appendChild(input_telephone_field);		
+
+		//SUBMIT
+		form.appendChild(document.createElement('br'));
+		var input_send_field=document.createElement('input');
+		input_send_field.type='submit';
+		input_send_field.id='send_field';
+		input_send_field.name='send_submit_field';
+		form.appendChild(input_send_field);	
+
+		docFrag.appendChild(form);
+
+		document.getElementById('wrapper').appendChild(docFrag);
+	</script>
+</body>
+</html>

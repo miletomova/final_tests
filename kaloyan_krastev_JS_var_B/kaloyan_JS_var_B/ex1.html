@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>ex1</title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			function digit_get(param)
+			{
+				var m=param[1];
+				
+				if(isNaN(m))
+				{
+					document.write('Parameter not a number');
+				}
+
+				else
+				{
+					var n=+param[0];
+					var p=param[2];
+
+					var helper=[], len_original, len_after;
+
+					m=m.toString().split('');
+
+					len_original=m.length;
+
+					for(var i=0; i<len_original; i++)
+					{
+						if(!isNaN(m[i]))
+						{
+							helper.push(m[i]);
+						}
+					}
+
+					len_after=helper.length;
+
+					if(n<=len_after)
+					{
+						if(p==true)
+							document.write(helper[len_after-n]);
+						if(p==false)
+							document.write(helper[n-1]);
+					}
+					else
+					{
+						document.write("The number doesn't have "+n+" digits");
+					}
+				}
+			}
+
+			var arr=[1, 9, true];
+
+			digit_get(arr);
+		</script>
+	</body>
+</html>

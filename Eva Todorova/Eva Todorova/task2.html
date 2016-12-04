@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="wrapper"></div>
+<script type="text/javascript">
+var  docFrag = document.createDocumentFragment();
+
+	var Name = document.createElement('p');
+	Name.innerHTML = 'Name: <br>';
+	
+	var inputName = document.createElement('input');
+	inputName.type = 'text';
+	inputName.name = 'my-name';
+	console.log(inputName);
+
+	var Pass = document.createElement('p');
+	Pass.innerHTML = 'Pass: <br>';
+
+	var inputPass = document.createElement('input');
+	inputPass.type = 'text';
+	inputPass.name = 'my-pass';
+	console.log(inputPass);
+
+
+	var Phone = document.createElement('p');
+	Phone.innerHTML = 'Phone: <br>';
+
+	var inputPhone = document.createElement('input');
+	inputPhone.type = 'text';
+	inputPhone.name = 'my-name';
+	console.log(inputPhone);
+
+
+	var submit = document.createElement('input');
+	submit.type = 'submit';
+	submit.name = 'submit';
+	submit.value = 'logIn';
+	console.log(submit.value);  
+
+	var form = document.createElement('form');
+	form.id = 'form';
+
+	form.appendChild(Name);
+	form.appendChild(inputName);
+	form.appendChild(Pass);
+	form.appendChild(inputPass);
+	form.appendChild(Phone);
+	form.appendChild(inputPhone);
+	form.appendChild(submit);
+
+	docFrag.appendChild(form);
+	// document.body.appendChild(form);
+	document.body.appendChild(docFrag);
+
+	//console.log(form);
+
+
+
+</script>
+</body>
+</html>
